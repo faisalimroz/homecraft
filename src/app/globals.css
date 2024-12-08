@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body{
+  box-sizing: border-box;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background:#4f46e5; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+
+
+
+
+@media screen and (min-width: 1400px) {
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.hero-bg {
+  background-image: url('../../public/assets/hero-bg.avif');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.75); /* bg-gray-900/75 */
+}
+
+@media (min-width: 640px) {
+  .hero-bg::before {
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.25));
+  }
+}
+
+/* For RTL support */
+[dir="rtl"] .hero-bg::before {
+  background-image: linear-gradient(to left, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.25));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image-container:hover .hero-image {
+  transform: scale(1.05);
+}
+
+.feature-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #4f46e5, #818cf8);
+}
+
+
+
+.login-bg {
+  background-image: url('../../public/assets/mourizal-zativa-90JFNMyBeek-unsplash.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+  
+  
+}
+.breadcrumb-bar {
+  background-image: url(../../public//assets/bg.png);
+  text-align: center;
+  position: relative;
+  padding: 70px 0;
+}
+
+.circle-icon {   
+    border-radius: 50%;
+} 
+
+.custom-prev-arrow, .custom-next-arrow {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+.custom-prev-arrow:hover, .custom-next-arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+.input::placeholder {
+  font-size: 10px; 
+}
+
+.text-gold {
+  color: #ffbc35;
+}
+
+
+.image-wrapper {
+  overflow: hidden; 
+}
+
+.image-wrapper img {
+  transition: transform 300ms ease-in-out; 
+  display: block; 
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.25); 
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 500px; 
+  border: none !important; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background: white; 
+  font-family: 'Arial', sans-serif; 
+}
+
+.react-calendar__navigation button {
+  background: transparent;
+  border: none !important;
+  color: #4c40ed !important;
+  font-size: 1.25rem;
+}
+
+.react-calendar__navigation__label__labelText .react-calendar__navigation__label__labelText--from{
+  color: #4c40ed !important;
+}
+
+
+.react-calendar__tile {
+  border-radius: 4px; 
+  padding: 10px;
+  font-size: 0.875rem;
+  color: gray !important; 
+  text-decoration: none !important;
+}
+.react-calendar__tile--now{
+  background:#f0f0f0 !important;
+}
+
+
+.react-calendar__tile:hover {
+  background-color: #f0f0f0; 
+  cursor: pointer;
+}
+
+
+.react-calendar__tile--active {
+  background-color: #4c40ed !important; 
+  color: white !important;
+  border-radius: 8px; 
+  
+}
+
+
+.react-calendar__tile--hasActive {
+  background-color: #e0e0e0;
+  color: gray;
+}
+
+
+.react-calendar__month-view__weekdays {
+  font-weight: 500;
+  color: gray; 
+}
+
+
+.react-calendar__month-view__days__day--weekend {
+  color: gray; 
+}
+
+
