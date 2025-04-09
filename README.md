@@ -83,21 +83,4 @@ User Notifications: Implement push notifications for users to get real-time upda
 AI-based Service Recommendations: Incorporate machine learning models to recommend services to users based on their previous bookings and preferences.
 
 
-#Login Credentials
-
-User :
-
-Email: riaz@gmail.com
-password: riaz123
-
-Provider:
-
-Email: syednew5000@gmail.com
-password: syed123
-
-
-Admin:
-
-Email: mikatsyed@gmail.com
-password: mikat123
 
